@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Background Image Example</title>
+<style>
+  .element {
+    background-image: url(snake-year-background.jpg);
+    /* 其他背景相关的CSS属性 */
+  }
+</style>
+</head>
+<body>
+
+<div class="element">
+  <!-- 内容 -->
+</div>
+
+</body>
+</html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>蛇年上上签</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: '楷体', '宋体', sans-serif;
+      background: #f0f0f0 url(snake-year-background.jpg) no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+    }
+    .fortune-container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 80%;
+      max-width: 400px;
+    }
+    .fortune-title {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    .fortune-button:hover {
+      background-color: #45a049;
+    }
+    .selected-name {
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+    }
+    .snake-year-element {
+      font-size: 3em;
+      color: #f44336;
+    }
+
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>带有顶部和底部图片的网页</title>
+  <style>
+    /* 你的CSS样式 */
+    .top-image {
+      width: 50%; /* 或者指定具体宽度 */
+      height: auto; /* 保持图片比例 */
+    }
+    .bottom-image {
+      width: 50%; /* 或者指定具体宽度 */
+      height: auto; /* 保持图片比例 */
+    }
+  </style>
+</head>
+<body>
+ 
+  <!-- 底部图片 -->
+  <img src="nio.png" alt="底部图片" class="bottom-image">
+</body>
+</html>
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="snake-year-element">🐍</div>
+    <br>
+    <div class="fortune-title">蛇年上上签</div>
+    <br>
+    <button id="drawButton">开始抽取</button>
+    <br>
+    <div class="selected-name" id="selectedName">-</div>
+</div>
+
+
+  <script>
+    // 模拟后台数据
+    var names = [ "竹报平安 一帆风顺",
+  "吃饭永远不排队，停车一直有车位",
+  "家庭和睦乐无边，亲恩常伴岁月甜",
+  "笑口常开 好运常在",
+  "鸿运当头 福寿安康",
+  "平安喜乐 未来可期",
+  "福气临门 得偿所愿",
+  "睡眠充足质量高，发量喜人长势好",
+  "有钱又有闲，去找诗和远方",
+  "瑞气盈门 福星高照",
+  "所愿皆所得，所思皆成真",
+  "人生前路 坦途光明 大吉大利 诸事顺遂",
+  "别灰心，你所期待的一切，即将到来",
+  "日富一日 年富一年",
+  "福字天生 百事遂意",
+  "身体强健 安康无忧",
+  "你所向往的都在前方,你所坚定的皆有收获",
+  "商机遍地随心赏，富贵荣华伴路长"];
+    var selectedName = document.getElementById('selectedName');
+    var drawButton = document.getElementById('drawButton');
+    var intervalId;
+    
+    drawButton.addEventListener('click', function() {
+        if (drawButton.textContent === '开始抽取') {
+            intervalId = setInterval(function() {
+                var randomIndex = Math.floor(Math.random() * names.length);
+                selectedName.textContent = names[randomIndex];
+            }, 100);
+            drawButton.textContent = '停止抽取';
+        } else {
+            clearInterval(intervalId);
+            drawButton.textContent = '开始抽取';
+        }
+    });
+    </script>
+    </body>
+    </html>
+ 
